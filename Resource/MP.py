@@ -1,6 +1,6 @@
 from flask_restful import Resource
 from Model.MPModel import MPModel
-from flask import request, render_template, make_response
+from flask import request
 
 
 class ListMP(Resource):
