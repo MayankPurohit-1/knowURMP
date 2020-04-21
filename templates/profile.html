@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container" style="padding:20px">
+    <div class="profile" style="float: left;margin-right:10px">
+        <img src="static/img/profile.jpg" width="300px" height="300px" style="border-radius:50%">
+    </div>
+
+    <div class="jumbotron" style="float:left; width:700px; padding:30px;">
+        <table style="width: 100%; margin-top: 1px;">
+            <tr>
+                <td><h5>MP Name</h5><p> {{ data['MP name'] }}</p></td>
+                <td><h5>Constituency</h5><p> {{ data.Constituency }}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Political Party</h5><p> {{ data['Political party'] }}</p></td>
+                <td><h5>State</h5><p> {{data.State}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Gender</h5><p> {{data.Gender}}</p></td>
+                <td><h5>Educational Qualification</h5><p> {{data['Educational qualifications']}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Edu. Qualification detail</h5><p> {{data['Educational qualifications - details']}}</p></td>
+                <td><h5>Age</h5><p> {{data.Age}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Private Member Bills</h5><p> {{data['Private Member Bills']}}</p></td>
+                <td><h5>National Pvt. Member Bills Average</h5><p> {{data['National Private Member Bills average']}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Debates</h5><p> {{data['Debates']}}</p></td>
+                <td><h5>National Debates average </h5><p> {{data['National Debates average']}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Questions</h5><p> {{data['Questions']}}</p></td>
+                <td><h5>National Questions average </h5><p> {{data['National Questions average']}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Attendance</h5><p> {{data['Attendance']}}</p></td>
+                <td><h5>National Attendance </h5><p> {{data['National Attendance average']}}</p></td>
+            </tr>
+
+            <tr>
+                <td><h5>Votes</h5><p> {{data['vote']}}</p></td>
+                <td><form action="/vote" method="POST">
+                    <input type="submit" value="Vote" class="btn btn-info"></form></td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+</div>
+{% endblock %}

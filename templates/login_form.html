@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="width:25%;margin-top:10%;">
+    <form action="" method = "POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.email.label(class="form-control-label") }}
+            {{form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{form.password.label(class="form-control-label") }}
+            {{form.password(class="form-control") }}
+        </div>
+        <input
+            type="hidden"
+            name="next"
+            value="{{ request.args.get('next', '') }}"
+        />
+        <div class="form-group">
+            <p>Remember Me   {{form.remember }}</p>
+        </div>
+
+        <div style="float:left;margin-top:10px;">
+        <small class="text-muted">Not Have An Account?<a href="/register"> Register </a></small>
+        </div>
+
+        <div style="text-align:center;">
+            <input type="submit" value = 'Login' class = "btn btn-primary">
+        </div>
+    </form>
+
+</div>
+{% endblock %}

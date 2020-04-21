@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Know Your MPs: A platform to know and choose right candidate.</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--	<link rel="stylesheet" href="static/css/home.css">-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script language="javascript" type="text/javascript">
+		$(document).ready(function(){
+
+		var Andaman = [
+		{display: 'Andaman and Nicobar Islands', value: 'Andaman and Nicobar Islands'}
+		];
+
+		var Andhra_Pradesh = [
+		{display: 'Nellore', value: 'Nellore'},
+		{display: 'Machilipatnam', value: 'Machilipatnam'},
+		{display: 'Tirupati', value: 'Tirupati'},
+		{display: 'Anakapalli', value: 'Anakapalli'},
+		{display: 'Vizianagaram', value: 'Vizianagaram'},
+		{display: 'Amalapuram', value: 'Amalapuram'},
+		{display: 'Araku', value: 'Araku'},
+		{display: 'Guntur', value: 'Guntur'},
+		{display: 'Narsapuram', value: 'Narsapuram'},
+		{display: 'Vijayawada', value: 'Vijayawada'},
+		{display: 'Hindupur', value: 'Hindupur'},
+		{display: 'Narasaraopet', value: 'Narasaraopet'},
+		{display: 'Visakhapatnam', value: 'Visakhapatnam'},
+		{display: 'Ongole', value: 'Ongole'},
+		{display: 'Rajahmundry', value: 'Rajahmundry'},
+		{display: 'Chittoor', value: 'Chittoor'},
+		{display: 'Rajampet', value: 'Rajampet'},
+		{display: 'Nandyal', value: 'Nandyal'},
+		{display: 'Srikakulam', value: 'Srikakulam'},
+		{display: 'Kurnool', value: 'Kurnool'},
+		{display: 'Eluru', value: 'Eluru'},
+		{display: 'Bapatla', value: 'Bapatla'},
+		{display: 'Anantapur', value: 'Anantapur'},
+		{display: 'Kakinada', value: 'Kakinada'},
+		{display: 'Kadapa', value: 'Kadapa'},
+		];
+
+		var Arunchal_Pradesh = [
+		{display: 'Arunachal West', value: 'Arunachal West'},
+		{display: 'Arunachal East', value: 'Arunachal East'},
+		];
+
+		var Assam = [
+		{display: 'Barpeta', value: 'Barpeta'},
+		{display: 'Dhubri', value: 'Dhubri'},
+		{display: 'Mangaldoi', value: 'Mangaldoi'},
+		{display: 'Kaliabor', value: 'Kaliabor'},
+		{display: 'Autonomous District', value: 'Autonomous District'},
+		{display: 'Karimganj', value: 'Karimganj'},
+		{display: 'Kokrajhar', value: 'Kokrajhar'},
+		{display: 'Tezpur', value: 'Tezpur'},
+		{display: 'Lakhimpur', value: 'Lakhimpur'},
+		{display: 'Nawgong', value: 'Nawgong'},
+		{display: 'Gauhati', value: 'Gauhati'},
+		{display: 'Silchar', value: 'Silchar'},
+		{display: 'Dibrugarh', value: 'Dibrugarh'},
+		{display: 'Jorhat', value: 'Jorhat'},
+		];
+
+		var Bihar = [
+		{display: 'Bhagalpur', value: 'Bhagalpur'},
+		{display: 'Muzaffarpur', value: 'Muzaffarpur'},
+		{display: 'Gopalganj', value: 'Gopalganj'},
+		{display: 'Madhubani', value: 'Madhubani'},
+		{display: 'Buxar', value: 'Buxar'},
+		{display: 'Valmiki Nagar', value: 'Valmiki Nagar'},
+		{display: 'Nawada', value: 'Nawada'},
+		{display: 'Jahanabad', value: 'Jahanabad'},
+		{display: 'Sasaram', value: 'Sasaram'},
+		{display: 'Jamui', value: 'Jamui'},
+		{display: 'Supaul', value: 'Supaul'},
+		{display: 'Madhepura', value: 'Madhepura'},
+		{display: 'Katihar', value: 'Katihar'},
+		{display: 'Banka', value: 'Banka'},
+		{display: 'Begusarai', value: 'Begusarai'},
+		{display: 'Darbhanga', value: 'Darbhanga'},
+		{display: 'Maharajganj', value: 'Maharajganj'},
+		{display: 'Nalanda', value: 'Nalanda'},
+		{display: 'Siwan', value: 'Siwan'},
+		{display: 'Karakat', value: 'Karakat'},
+		{display: 'Khagaria', value: 'Khagaria'},
+		{display: 'Kishanganj', value: 'Kishanganj'},
+		{display: 'Ujiarpur', value: 'Ujiarpur'},
+		{display: 'Hajipur', value: 'Hajipur'},
+		{display: 'Araria', value: 'Araria'},
+		{display: 'Samastipur', value: 'Samastipur'},
+		{display: 'Purvi Champaran', value: 'Purvi Champaran'},
+		{display: 'Arrah', value: 'Arrah'},
+		{display: 'Saran', value: 'Saran'},
+		{display: 'Munger', value: 'Munger'},
+		{display: 'Samastipur', value: 'Samastipur'},
+		{display: 'Pataliputra', value: 'Pataliputra'},
+		{display: 'Sheohar', value: 'Sheohar'},
+		{display: 'Jhanjharpur', value: 'Jhanjharpur'},
+		{display: 'Patna Sahib', value: 'Patna Sahib'},
+		{display: 'Paschim Champaran', value: 'Paschim Champaran'},
+		{display: 'Purnia', value: 'Purnia'},
+		{display: 'Sitamarhi', value: 'Sitamarhi'},
+		{display: 'Aurangabad', value: 'Aurangabad'},
+		{display: 'Vaishali', value: 'Vaishali'},
+		{display: 'Gaya', value: 'Gaya'}
+		];
+
+		var Chandigarh = [
+		{display: 'Chandigarh', value: 'Chandigarh'},
+		];
+
+		var Chhattisgarh = [
+		{display: 'Bilaspur', value: 'Bilaspur'},
+		{display: 'Mahasamund', value: 'Mahasamund'},
+		{display: 'Bastar', value: 'Bastar'},
+		{display: 'Raigarh', value: 'Raigarh'},
+		{display: 'Janjgir-Champa', value: 'Janjgir-Champa'},
+		{display: 'Korba', value: 'Korba'},
+		{display: 'Kanker', value: 'Kanker'},
+		{display: 'Surguja', value: 'Surguja'},
+		{display: 'Rajnandgaon', value: 'Rajnandgaon'},
+		{display: 'Raipur', value: 'Raipur'},
+		{display: 'Durg', value: 'Durg'},
+		];
+
+		var Dadra_Haveli = [
+		{display: 'Dadra and Nagar Haveli', value: 'Dadra and Nagar Haveli'}
+		];
+
+		var Daman = [
+		{display: 'Daman and Diu', value: 'Daman and Diu'}
+		];
+
+		var Delhi = [
+		{display: 'East Delhi', value: 'East Delhi'},
+		{display: 'North West Delhi', value: 'North West Delhi'},
+		{display: 'Chandni Chowk', value: 'Chandni Chowk'},
+		{display: 'North East Delhi', value: 'North East Delhi'},
+		{display: 'New Delhi', value: 'New Delhi'},
+		{display: 'West Delhi', value: 'West Delhi'},
+		{display: 'South Delhi', value: 'South Delhi'},
+		];
+
+		var Goa = [
+		{display: 'South Goa', value: 'South Goa'},
+		{display: 'North Goa', value: 'North Goa'},
+		];
+
+		var Gujarat = [
+		{display: 'Gandhinagar', value: 'Gandhinagar'},
+		{display: 'Bhavnagar', value: 'Bhavnagar'},
+		{display: 'Navsari', value: 'Navsari'},
+		{display: 'Kheda', value: 'Kheda'},
+		{display: 'Kachchh', value: 'Kachchh'},
+		{display: 'Junagadh', value: 'Junagadh'},
+		{display: 'Patan', value: 'Patan'},
+		{display: 'Surat', value: 'Surat'},
+		{display: 'Dahod', value: 'Dahod'},
+		{display: 'Valsad', value: 'Valsad'},
+		{display: 'Ahmedabad West', value: 'Ahmedabad West'},
+		{display: 'Surendranagar', value: 'Surendranagar'},
+		{display: 'Bharuch', value: 'Bharuch'},
+		{display: 'Anand', value: 'Anand'},
+		{display: 'Rajkot', value: 'Rajkot'},
+		{display: 'Amreli', value: 'Amreli'},
+		{display: 'Banaskantha', value: 'Banaskantha'},
+		{display: 'Ahmedabad East', value: 'Ahmedabad East'},
+		{display: 'Jamnagar', value: 'Jamnagar'},
+		{display: 'Porbandar', value: 'Porbandar'},
+		{display: 'Vadodara', value: 'Vadodara'},
+		{display: 'Panchmahal', value: 'Panchmahal'},
+		{display: 'Sabarkantha', value: 'Sabarkantha'},
+		{display: 'Chhota Udaipur', value: 'Chhota Udaipur'},
+		{display: 'Mehesana', value: 'Mehesana'},
+		{display: 'Bardoli', value: 'Bardoli'},
+		];
+
+		var Haryana = [
+		{display: 'Rohtak', value: 'Rohtak'},
+		{display: 'Hisar', value: 'Hisar'},
+		{display: 'Bhiwani-Mahendragarh', value: 'Bhiwani-Mahendragarh'},
+		{display: 'Gurgaon', value: 'Gurgaon'},
+		{display: 'Faridabad', value: 'Faridabad'},
+		{display: 'Kurukshetra', value: 'Kurukshetra'},
+		{display: 'Sonipat', value: 'Sonipat'},
+		{display: 'Ambala', value: 'Ambala'},
+		{display: 'Karnal', value: 'Karnal'},
+		{display: 'Sirsa', value: 'Sirsa'},
+		];
+
+		var Himachal_Pradesh = [
+		{display: 'Hamirpur', value: 'Hamirpur'},
+		{display: 'Kangra', value: 'Kangra'},
+		{display: 'Mandi', value: 'Mandi'},
+		{display: 'Shimla', value: 'Shimla'},
+		];
+
+		var Jammu_Kashmir = [
+		{display: 'Srinagar', value: 'Srinagar'},
+		{display: 'Anantnag', value: 'Anantnag'},
+		{display: 'Ladakh', value: 'Ladakh'},
+		{display: 'Udhampur', value: 'Udhampur'},
+		{display: 'Jammu', value: 'Jammu'},
+		{display: 'Baramulla', value: 'Baramulla'},
+		];
+
+		var Jharkhand =[
+		{display: 'Kodarma', value: 'Kodarma'},
+		{display: 'Khunti', value: 'Khunti'},
+		{display: 'Jamshedpur', value: 'Jamshedpur'},
+		{display: 'Giridih', value: 'Giridih'},
+		{display: 'Singhbhum', value: 'Singhbhum'},
+		{display: 'Hazaribagh', value: 'Hazaribagh'},
+		{display: 'Godda', value: 'Godda'},
+		{display: 'Dhanbad', value: 'Dhanbad'},
+		{display: 'Ranchi', value: 'Ranchi'},
+		{display: 'Lohardaga', value: 'Lohardaga'},
+		{display: 'Chatra', value: 'Chatra'},
+		{display: 'Dumka', value: 'Dumka'},
+		{display: 'Rajmahal', value: 'Rajmahal'},
+		{display: 'Palamu', value: 'Palamu'},
+		];
+
+		var Karnataka = [
+		{display: 'Chitradurga', value: 'Chitradurga'},
+		{display: 'Uttara Kannada', value: 'Uttara Kannada'},
+		{display: 'Chikkodi', value: 'Chikkodi'},
+		{display: 'Chikkballapur', value: 'Chikkballapur'},
+		{display: 'Shimoga', value: 'Shimoga'},
+		{display: 'Bidar', value: 'Bidar'},
+		{display: 'Bangalore Rural', value: 'Bangalore Rural'},
+		{display: 'Bangalore North', value: 'Bangalore North'},
+		{display: 'Tumkur', value: 'Tumkur'},
+		{display: 'Davanagere', value: 'Davanagere'},
+		{display: 'Koppal', value: 'Koppal'},
+		{display: 'Bangalore South', value: 'Bangalore South'},
+		{display: 'Dakshina Kannada', value: 'Dakshina Kannada'},
+		{display: 'Bangalore Central', value: 'Bangalore Central'},
+		{display: 'Bagalkot', value: 'Bagalkot'},
+		{display: 'Hassan', value: 'Hassan'},
+		{display: 'Dharwad', value: 'Dharwad'},
+		{display: 'Mysore', value: 'Mysore'},
+		{display: 'Raichur', value: 'Raichur'},
+		{display: 'Bijapur', value: 'Bijapur'},
+		{display: 'Kolar', value: 'Kolar'},
+		{display: 'Udupi Chikmagalur', value: 'Udupi Chikmagalur'},
+		{display: 'Mandya', value: 'Mandya'},
+		{display: 'Belgaum', value: 'Belgaum'},
+		{display: 'Haveri', value: 'Haveri'},
+		{display: 'Gulbarga', value: 'Gulbarga'},
+		{display: 'Chamrajanagar', value: 'Chamrajanagar'},
+		{display: 'Bellary', value: 'Bellary'}
+		];
+
+		var Kerala = [
+		{display: 'Alappuzha', value: 'Alappuzha'},
+		{display: 'Attingal', value: 'Attingal'},
+		{display: 'Pathanamthitta', value: 'Pathanamthitta'},
+		{display: 'Chalakudy', value: 'Chalakudy'},
+		{display: 'Idukki', value: 'Idukki'},
+		{display: 'Ponnani', value: 'Ponnani'},
+		{display: 'Ernakulam', value: 'Ernakulam'},
+		{display: 'Vadakara', value: 'Vadakara'},
+		{display: 'Kannur', value: 'Kannur'},
+		{display: 'Kozhikode', value: 'Kozhikode'},
+		{display: 'Kollam', value: 'Kollam'},
+		{display: 'Malappuram', value: 'Malappuram'},
+		{display: 'Wayanad', value: 'Wayanad'},
+		{display: 'Kasaragod', value: 'Kasaragod'},
+		{display: 'Alathur', value: 'Alathur'},
+		{display: 'Thiruvananthapuram', value: 'Thiruvananthapuram'},
+		{display: 'Mavelikkara', value: 'Mavelikkara'},
+		{display: 'Thrissur', value: 'Thrissur'},
+		{display: 'Kottayam', value: 'Kottayam'},
+		{display: 'Palakkad', value: 'Palakkad'}
+		];
+
+		var Lakshadweep = [
+		{display: 'Lakshadweep', value: 'Lakshadweep'}
+		];
+
+		var Madhya_Pradesh = [
+		{display: 'Ujjain', value: 'Ujjain'},
+		{display: 'Dhar', value: 'Dhar'},
+		{display: 'Balaghat', value: 'Balaghat'},
+		{display: 'Betul', value: 'Betul'},
+		{display: 'Mandla', value: 'Mandla'},
+		{display: 'Khargone', value: 'Khargone'},
+		{display: 'Satna', value: 'Satna'},
+		{display: 'Ratlam', value: 'Ratlam'},
+		{display: 'Shahdol', value: 'Shahdol'},
+		{display: 'Rewa', value: 'Rewa'},
+		{display: 'Guna', value: 'Guna'},
+		{display: 'Dewas', value: 'Dewas'},
+		{display: 'Chhindwara', value: 'Chhindwara'},
+		{display: 'Khandwa', value: 'Khandwa'},
+		{display: 'Morena', value: 'Morena'},
+		{display: 'Damoh', value: 'Damoh'},
+		{display: 'Sagar', value: 'Sagar'},
+		{display: 'Jabalpur', value: 'Jabalpur'},
+		{display: 'Vidisha', value: 'Vidisha'},
+		{display: 'Sidhi', value: 'Sidhi'},
+		{display: 'Rajgarh', value: 'Rajgarh'},
+		{display: 'Bhopal', value: 'Bhopal'},
+		{display: 'Bhind', value: 'Bhind'},
+		{display: 'Indore', value: 'Indore'},
+		{display: 'Mandsour', value: 'Mandsour'},
+		{display: 'Hoshangabad', value: 'Hoshangabad'},
+		{display: 'Tikamgarh', value: 'Tikamgarh'},
+		{display: 'Khajuraho', value: 'Khajuraho'},
+		{display: 'Gwalior', value: 'Gwalior'}
+		];
+
+		var Maharashtra = [
+		{display: 'Shirur', value: 'Shirur'},
+		{display: 'Mumbai-South', value: 'Mumbai-South'},
+		{display: 'Gadchiroli-Chimur', value: 'Gadchiroli-Chimur'},
+		{display: 'Chandrapur', value: 'Chandrapur'},
+		{display: 'Dindori', value: 'Dindori'},
+		{display: 'Yavatmal-Washim', value: 'Yavatmal-Washim'},
+		{display: 'Mumbai-North-West', value: 'Mumbai-North-West'},
+		{display: 'Pune', value: 'Pune'},
+		{display: 'Nashik', value: 'Nashik'},
+		{display: 'Mumbai-North', value: 'Mumbai-North'},
+		{display: 'Nandurbar', value: 'Nandurbar'},
+		{display: 'Hingoli', value: 'Hingoli'},
+		{display: 'Aurangabad', value: 'Aurangabad'},
+		{display: 'Buldhana', value: 'Buldhana'},
+		{display: 'Solapur', value: 'Solapur'},
+		{display: 'Bhiwandi', value: 'Bhiwandi'},
+		{display: 'Ramtek', value: 'Ramtek'},
+		{display: 'Mumbai-North-East', value: 'Mumbai-North-East'},
+		{display: 'Amravati', value: 'Amravati'},
+		{display: 'Nagpur', value: 'Nagpur'},
+		{display: 'Osmanabad', value: 'Osmanabad'},
+		{display: 'Mumbai-North-Central', value: 'Mumbai-North-Central'},
+		{display: 'Nanded', value: 'Nanded'},
+		{display: 'Beed', value: 'Beed'},
+		{display: 'Mumbai-South-Central', value: 'Mumbai-South-Central'},
+		{display: 'Thane', value: 'Thane'},
+		{display: 'Palghar', value: 'Palghar'},
+		{display: 'Raver', value: 'Raver'},
+		{display: 'Wardha', value: 'Wardha'},
+		{display: 'Madha', value: 'Madha'},
+		{display: 'Jalna', value: 'Jalna'},
+		{display: 'Shirdi', value: 'Shirdi'},
+		{display: 'Hatkanangle', value: 'Hatkanangle'},
+		{display: 'Parbhani', value: 'Parbhani'},
+		{display: 'Kolhapur', value: 'Kolhapur'},
+		{display: 'Akola', value: 'Akola'},
+		{display: 'Sangli', value: 'Sangli'},
+		{display: 'Kalyan', value: 'Kalyan'},
+		{display: 'Satara', value: 'Satara'},
+		{display: 'Satara', value: 'Satara'},
+		{display: 'Maval', value: 'Maval'},
+		{display: 'Dhule', value: 'Dhule'},
+		{display: 'Latur', value: 'Latur'},
+		{display: 'Ahmednagar', value: 'Ahmednagar'},
+		{display: 'Bhandara-Gondiya', value: 'Bhandara-Gondiya'},
+		{display: 'Baramati', value: 'Baramati'},
+		{display: 'Raigad', value: 'Raigad'},
+		{display: 'Jalgaon', value: 'Jalgaon'},
+		{display: 'Ratnagiri-Sindhudurg', value: 'Ratnagiri-Sindhudurg'}
+		];
+
+		var Manipur = [
+		{display: 'Outer Manipur', value: 'Outer Manipur'},
+		{display: 'Inner Manipur', value: 'Inner Manipur'}
+		];
+
+		var Meghalaya = [
+		{display: 'Tura', value: 'Tura'},
+		{display: 'Shillong', value: 'Shillong'},
+		];
+
+		var Mizoram = [
+		{display: 'Mizoram', value: 'Mizoram'}
+		];
+
+		var Nagaland = [
+		{display: 'Nagaland', value: 'Nagaland'}
+		];
+
+		var Odisha = [
+		{display: 'Kandhamal', value: 'Kandhamal'},
+		{display: 'Kendrapara', value: 'Kendrapara'},
+		{display: 'Bhubaneswar', value: 'Bhubaneswar'},
+		{display: 'Kalahandi', value: 'Kalahandi'},
+		{display: 'Cuttack', value: 'Cuttack'},
+		{display: 'Mayurbhanj', value: 'Mayurbhanj'},
+		{display: 'Berhampur', value: 'Berhampur'},
+		{display: 'Keonjhar', value: 'Keonjhar'},
+		{display: 'Sundargarh', value: 'Sundargarh'},
+		{display: 'Dhenkanal', value: 'Dhenkanal'},
+		{display: 'Bhadrak', value: 'Bhadrak'},
+		{display: 'Sambalpur', value: 'Sambalpur'},
+		{display: 'Puri', value: 'Puri'},
+		{display: 'Aska', value: 'Aska'},
+		{display: 'Balasore', value: 'Balasore'},
+		{display: 'Jagatsinghpur', value: 'Jagatsinghpur'},
+		{display: 'Nabarangpur', value: 'Nabarangpur'},
+		{display: 'Bolangir', value: 'Bolangir'},
+		{display: 'Koraput', value: 'Koraput'},
+		{display: 'Jajpur', value: 'Jajpur'},
+		{display: 'Bargarh', value: 'Bargarh'}
+		];
+
+		var Puducherry = [
+		{display: 'Puducherry', value: 'Puducherry'}
+		];
+
+		var Punjab = [
+		{display: 'Gurdaspur', value: 'Gurdaspur'},
+		{display: 'Fatehgarh Sahib', value: 'Fatehgarh Sahib'},
+		{display: 'Sangrur', value: 'Sangrur'},
+		{display: 'Amritsar', value: 'Amritsar'},
+		{display: 'Bathinda', value: 'Bathinda'},
+		{display: 'Khadoor Sahib', value: 'Khadoor Sahib'},
+		{display: 'Anandpur Sahib', value: 'Anandpur Sahib'},
+		{display: 'Faridkot', value: 'Faridkot'},
+		{display: 'Patiala', value: 'Patiala'},
+		{display: 'Ludhiana', value: 'Ludhiana'},
+		{display: 'Jalandhar', value: 'Jalandhar'},
+		{display: 'Hoshiarpur', value: 'Hoshiarpur'},
+		{display: 'Ferozpur', value: 'Ferozpur'}
+		];
+
+        var Rajasthan = [
+        {display: 'Bikaner', value: 'Bikaner'},
+        {display: 'Udaipur', value: 'Udaipur'},
+        {display: 'Alwar', value: 'Alwar'},
+        {display: 'Ajmer', value: 'Ajmer'},
+        {display: 'Chittorgarh', value: 'Chittorgarh'},
+        {display: 'Jalore', value: 'Jalore'},
+        {display: 'Rajsamand', value: 'Rajsamand'},
+        {display: 'Jhalawar-Baran', value: 'Jhalawar-Baran'},
+        {display: 'Jodhpur', value: 'Jodhpur'},
+        {display: 'Nagaur', value: 'Nagaur'},
+        {display: 'Dausa', value: 'Dausa'},
+        {display: 'Barmer', value: 'Barmer'},
+        {display: 'Banswara', value: 'Banswara'},
+        {display: 'Karauli-Dholpur', value: 'Karauli-Dholpur'},
+        {display: 'Jhunjhunu', value: 'Jhunjhunu'},
+        {display: 'Ganganagar', value: 'Ganganagar'},
+        {display: 'Kota', value: 'Kota'},
+        {display: 'Pali', value: 'Pali'},
+        {display: 'Churu', value: 'Churu'},
+        {display: 'Jaipur Rural', value: 'Jaipur Rural'},
+        {display: 'Jaipur', value: 'Jaipur'},
+        {display: 'Bharatpur', value: 'Bharatpur'},
+        {display: 'Bhilwara', value: 'Bhilwara'},
+        {display: 'Tonk-Sawai Madhopur', value: 'Tonk-Sawai Madhopur'},
+        {display: 'Sikar', value: 'Sikar'}
+        ];
+
+        var Sikkim = [
+		{display: 'Sikkim', value: 'Sikkim'}
+		];
+
+		var Tamil_Nadu = [
+		{display: 'Krisnagiri', value: 'Krisnagiri'},
+		{display: 'Erode', value: 'Erode'},
+		{display: 'Namakkal', value: 'Namakkal'},
+		{display: 'Nilgiris', value: 'Nilgiris'},
+		{display: 'Tiruvannamalai', value: 'Tiruvannamalai'},
+		{display: 'Viluppuram', value: 'Viluppuram'},
+		{display: 'Vellore', value: 'Vellore'},
+		{display: 'Chennai Central', value: 'Chennai Central'},
+		{display: 'Tenkasi', value: 'Tenkasi'},
+		{display: 'Dharmapuri', value: 'Dharmapuri'},
+		{display: 'Kancheepuram', value: 'Kancheepuram'},
+		{display: 'Kallakurichi', value: 'Kallakurichi'},
+		{display: 'Kanniyakumari', value: 'Kanniyakumari'},
+		{display: 'Tiruvallur', value: 'Tiruvallur'},
+		{display: 'Ramanthapuram', value: 'Ramanthapuram'},
+		{display: 'Pollachi', value: 'Pollachi'},
+		{display: 'Tiruppur', value: 'Tiruppur'},
+		{display: 'Thoothukkudi', value: 'Thoothukkudi'},
+		{display: 'Sivaganga', value: 'Sivaganga'},
+		{display: 'Nagapattinam', value: 'Nagapattinam'},
+		{display: 'Arani', value: 'Arani'},
+		{display: 'Virudhunagar', value: 'Virudhunagar'},
+		{display: 'Theni', value: 'Theni'},
+		{display: 'Dindigul', value: 'Dindigul'},
+		{display: 'Coimbatore', value: 'Coimbatore'},
+		{display: 'Tirunelveli', value: 'Tirunelveli'},
+		{display: 'Arakkonam', value: 'Arakkonam'},
+		{display: 'Karur', value: 'Karur'},
+		{display: 'Mayiladuthurai', value: 'Mayiladuthurai'},
+		{display: 'Madurai', value: 'Madurai'},
+		{display: 'Salem', value: 'Salem'},
+		{display: 'Thanjavur', value: 'Thanjavur'},
+		{display: 'Tiruchirappalli', value: 'Tiruchirappalli'},
+		{display: 'Chennai South', value: 'Chennai South'},
+		{display: 'Perambalur', value: 'Perambalur'},
+		{display: 'Cuddalore', value: 'Cuddalore'},
+		{display: 'Sriperumbudur', value: 'Sriperumbudur'},
+		{display: 'Chidambaram', value: 'Chidambaram'},
+		{display: 'Chennai North', value: 'Chennai North'}
+		];
+
+		var Telangana =[
+		{display: 'Malkajgiri', value: 'Malkajgiri'},
+		{display: 'Nizamabad', value: 'Nizamabad'},
+		{display: 'Hyderabad', value: 'Hyderabad'},
+		{display: 'Zahirabad', value: 'Zahirabad'},
+		{display: 'Warangal', value: 'Warangal'},
+		{display: 'Secunderabad', value: 'Secunderabad'},
+		{display: 'Chelvella', value: 'Chelvella'},
+		{display: 'Mahabubabad', value: 'Mahabubabad'},
+		{display: 'Bhongir', value: 'Bhongir'},
+		{display: 'Medak', value: 'Medak'},
+		{display: 'Mahabubnagar', value: 'Mahabubnagar'},
+		{display: 'Khammam', value: 'Khammam'},
+		{display: 'Nagarkurnool', value: 'Nagarkurnool'},
+		{display: 'Karimnagar', value: 'Karimnagar'},
+		{display: 'Adilabad', value: 'Adilabad'},
+		{display: 'Nalgonda', value: 'Nalgonda'},
+		{display: 'Peddapalle', value: 'Peddapalle'}
+		];
+
+		var Tripura = [
+		{display: 'Tripura West', value: 'Tripura West'},
+		{display: 'Tripura East', value: 'Tripura East'}
+		];
+
+		var Uttar_Pradesh = [
+		{display: 'Ghazipur', value: 'Ghazipur'},
+		{display: 'Kheri', value: 'Kheri'},
+		{display: 'Azamgarh', value: 'Azamgarh'},
+		{display: 'Bahraich', value: 'Bahraich'},
+		{display: 'Mirzapur', value: 'Mirzapur'},
+		{display: 'Jhansi', value: 'Jhansi'},
+		{display: 'Shahjahanpur', value: 'Shahjahanpur'},
+		{display: 'Misrikh', value: 'Misrikh'},
+		{display: 'Ghosi', value: 'Ghosi'},
+		{display: 'Jalaun', value: 'Jalaun'},
+		{display: 'Bulandshahr', value: 'Bulandshahr'},
+		{display: 'Machhlishahr', value: 'Machhlishahr'},
+		{display: 'Kaiserganj', value: 'Kaiserganj'},
+		{display: 'Firozabad', value: 'Firozabad'},
+		{display: 'Akbarpur', value: 'Akbarpur'},
+		{display: 'Aonla', value: 'Aonla'},
+		{display: 'Pilibhit', value: 'Pilibhit'},
+		{display: 'Nagina', value: 'Nagina'},
+		{display: 'Saharanpur', value: 'Saharanpur'},
+		{display: 'Basti', value: 'Basti'},
+		{display: 'Mathura', value: 'Mathura'},
+		{display: 'Domariyaganj', value: 'Domariyaganj'},
+		{display: 'Hardoi', value: 'Hardoi'},
+		{display: 'Bansgaon', value: 'Bansgaon'},
+		{display: 'Mohanlalganj', value: 'Mohanlalganj'},
+		{display: 'Phulpur', value: 'Phulpur'},
+		{display: 'Gonda', value: 'Gonda'},
+		{display: 'Amroha', value: 'Amroha'},
+		{display: 'Faizabad', value: 'Faizabad'},
+		{display: 'Chandauli', value: 'Chandauli'},
+		{display: 'Gautam Buddha Nagar', value: 'Gautam Buddha Nagar'},
+		{display: 'Bijnor', value: 'Bijnor'},
+		{display: 'Sultanpur', value: 'Sultanpur'},
+		{display: 'Rampur', value: 'Rampur'},
+		{display: 'Farrukhabad', value: 'Farrukhabad'},
+		{display: 'Mainpuri', value: 'Mainpuri'},
+		{display: 'Varanasi', value: 'Varanasi'},
+		{display: 'Fatehpur', value: 'Fatehpur'},
+		{display: 'Robertsganj', value: 'Robertsganj'},
+		{display: 'Maharajganj', value: 'Maharajganj'},
+		{display: 'Kairana', value: 'Kairana'},
+		{display: 'Sant Kabir Nagar', value: 'Sant Kabir Nagar'},
+		{display: 'Hamirpur', value: 'Hamirpur'},
+		{display: 'Banda', value: 'Banda'},
+		{display: 'Meerut', value: 'Meerut'},
+		{display: 'Sitapur', value: 'Sitapur'},
+		{display: 'Fatehpur Sikri', value: 'Fatehpur Sikri'},
+		{display: 'Lucknow', value: 'Lucknow'},
+		{display: 'Etah', value: 'Etah'},
+		{display: 'Hathras', value: 'Hathras'},
+		{display: 'Etawah', value: 'Etawah'},
+		{display: 'Shrawasti', value: 'Shrawasti'},
+		{display: 'Deoria', value: 'Deoria'},
+		{display: 'Bhadohi', value: 'Bhadohi'},
+		{display: 'Salempur', value: 'Salempur'},
+		{display: 'Gorakhpur', value: 'Gorakhpur'},
+		{display: 'Dhaurahra', value: 'Dhaurahra'},
+		{display: 'Allahabad', value: 'Allahabad'},
+		{display: 'Ambedkar Nagar', value: 'Ambedkar Nagar'},
+		{display: 'Agra', value: 'Agra'},
+		{display: 'Moradabad', value: 'Moradabad'},
+		{display: 'Pratapgarh', value: 'Pratapgarh'},
+		{display: 'Lalganj', value: 'Lalganj'},
+		{display: 'Badaun', value: 'Badaun'},
+		{display: 'Muzaffarnagar', value: 'Muzaffarnagar'},
+		{display: 'Bareilly', value: 'Bareilly'},
+		{display: 'Aligarh', value: 'Aligarh'},
+		{display: 'Baghpat', value: 'Baghpat'},
+		{display: 'Kanpur', value: 'Kanpur'},
+		{display: 'Sambhal', value: 'Sambhal'},
+		{display: 'Jaunpur', value: 'Jaunpur'},
+		{display: 'Amethi', value: 'Amethi'},
+		{display: 'Rae Bareli', value: 'Rae Bareli'},
+		{display: 'Kannauj', value: 'Kannauj'},
+		{display: 'Unnao', value: 'Unnao'},
+		{display: 'Barabanki', value: 'Barabanki'},
+		{display: 'Khushi Nagar', value: 'Khushi Nagar'},
+		{display: 'Ghaziabad', value: 'Ghaziabad'},
+		{display: 'Kaushambi', value: 'Kaushambi'},
+		{display: 'Ballia', value: 'Ballia'}
+		];
+
+		var Uttarakhand = [
+		{display: 'Nainital-Udhamsingh Nagar', value: 'Nainital-Udhamsingh Nagar'},
+		{display: 'Almora', value: 'Almora'},
+		{display: 'Tehri Garhwal', value: 'Tehri Garhwal'},
+		{display: 'Hardwar', value: 'Hardwar'},
+		{display: 'Garhwal', value: 'Garhwal'}
+		];
+
+		var West_Bengal =[
+		{display: 'Diamond Harbour', value: 'Diamond Harbour'},
+		{display: 'Maldaha Dakshin', value: 'Maldaha Dakshin'},
+		{display: 'Murshidabad', value: 'Murshidabad'},
+		{display: 'Ghatal', value: 'Ghatal'},
+		{display: 'Baharampur', value: 'Baharampur'},
+		{display: 'Arambagh', value: 'Arambagh'},
+		{display: 'Barrackpur', value: 'Barrackpur'},
+		{display: 'Bolpur', value: 'Bolpur'},
+		{display: 'Asansol', value: 'Asansol'},
+		{display: 'Mathurapur', value: 'Mathurapur'},
+		{display: 'Raiganj', value: 'Raiganj'},
+		{display: 'Tamluk', value: 'Tamluk'},
+		{display: 'Medinipur', value: 'Medinipur'},
+		{display: 'Ranaghat', value: 'Ranaghat'},
+		{display: 'Jalpaiguri', value: 'Jalpaiguri'},
+		{display: 'Alipurduars', value: 'Alipurduars'},
+		{display: 'Purulia', value: 'Purulia'},
+		{display: 'Barasat', value: 'Barasat'},
+		{display: 'Serampore', value: 'Serampore'},
+		{display: 'Maldaha Uttar', value: 'Maldaha Uttar'},
+		{display: 'Jangipur', value: 'Jangipur'},
+		{display: 'Jhargram', value: 'Jhargram'},
+		{display: 'Hooghly', value: 'Hooghly'},
+		{display: 'Krishnanagar', value: 'Krishnanagar'},
+		{display: 'Kolkata Dakshin', value: 'Kolkata Dakshin'},
+		{display: 'Jadavpur', value: 'Jadavpur'},
+		{display: 'Cooch Behar', value: 'Cooch Behar'},
+		{display: 'Basirhat', value: 'Basirhat'},
+		{display: 'Howrah', value: 'Howrah'},
+		{display: 'Jaynagar', value: 'Jaynagar'},
+		{display: 'Darjeeling', value: 'Darjeeling'},
+		{display: 'Bardhaman-Durgapur', value: 'Bardhaman-Durgapur'},
+		{display: 'Uluberia', value: 'Uluberia'},
+		{display: 'Birbhum', value: 'Birbhum'},
+		{display: 'Dum Dum', value: 'Dum Dum'},
+		{display: 'Bishnupur', value: 'Bishnupur'},
+		{display: 'Bongaon', value: 'Bongaon'},
+		{display: 'Kanthi', value: 'Kanthi'},
+		{display: 'Bankura', value: 'Bankura'},
+		{display: 'Kolkata Uttar', value: 'Kolkata Uttar'},
+		{display: 'Balurghat', value: 'Balurghat'},
+		{display: 'Bardhaman Purba', value: 'Bardhaman Purba'}
+		];
+
+
+        //If parent option is changed
+        $("#state").change(function() {
+                var parent = $(this).val(); //get option value from parent
+
+                switch(parent){ //using switch compare selected option and populate child
+
+                			case 'Andaman and Nicobar Islands':
+								list(Andaman);
+								break;
+
+							case 'Andhra Pradesh':
+								list(Andhra_Pradesh);
+								break;
+
+							case 'Arunachal Pradesh':
+								list(Arunachal_Pradesh);
+								break;
+
+							case 'Assam':
+								list(Assam);
+								break;
+
+							case 'Bihar':
+								list(Bihar);
+								break;
+
+							case 'Chandigarh':
+								list(Chandigarh);
+								break;
+
+							case 'Chhattisgarh':
+								list(Chhattisgarh);
+								break;
+
+							case 'Dadra and Nagar Haveli':
+								list(Dadra_Haveli);
+								break;
+
+							case 'Daman and Diu':
+								list(Daman);
+								break;
+
+							case 'Delhi':
+								list(Delhi);
+								break;
+
+							case 'Goa':
+								list(Goa);
+								break;
+
+							case 'Gujarat':
+								list(Gujarat);
+								break;
+
+							case 'Haryana':
+								list(Haryana);
+								break;
+
+							case 'Himachal Pradesh':
+								list(Himachal_Pradesh);
+								break;
+
+							case 'Jammu and Kashmir':
+								list(Jammu_Kashmir);
+								break;
+
+							case 'Jharkhand':
+								list(Jharkhand);
+								break;
+
+							case 'Karnataka':
+								list(Karnataka);
+								break;
+
+							case 'Kerala':
+								list(Kerala);
+								break;
+
+							case 'Lakshadweep':
+								list(Lakshadweep);
+								break;
+
+							case 'Madhya Pradesh':
+								list(Madhya_Pradesh);
+								break;
+
+							case 'Maharashtra':
+								list(Maharashtra);
+								break;
+
+							case 'Manipur':
+								list(Manipur);
+								break;
+
+							case 'Meghalaya':
+								list(Meghalaya);
+								break;
+
+							case 'Mizoram':
+								list(Mizoram);
+								break;
+
+							case 'Nagaland':
+								list(Nagaland);
+								break;
+
+							case 'Odisha':
+								list(Odisha);
+								break;
+
+							case 'Puducherry':
+								list(Puducherry);
+								break;
+
+							case 'Punjab':
+								list(Punjab);
+								break;
+
+                			case 'Rajasthan':
+								list(Rajasthan);
+								break;
+
+							case 'Sikkim':
+								list(Sikkim);
+								break;
+
+							case 'Tamil Nadu':
+								list(Tamil_Nadu);
+								break;
+
+							case 'Telangana':
+								list(Telangana);
+								break;
+
+							case 'Tripura':
+								list(Tripura);
+								break;
+
+							case 'Uttar Pradesh':
+								list(Uttar_Pradesh);
+								break;
+
+							case 'Uttarakhand':
+								list(Uttarakhand);
+								break;
+
+							case 'West Bengal':
+								list(West_Bengal);
+								break;
+
+                      }
+        });
+
+        //function to populate child select box
+        function list(array_list)
+        {
+            $("#constituency").html(""); //reset child options
+            $(array_list).each(function (i) { //populate child options
+                $("#constituency").append("<option value=\""+array_list[i].value+"\">"+array_list[i].display+"</option>");
+            });
+        }
+
+        });
+	</script>
+
+	<style>
+		body {
+		margin: 0px;
+		background-image: url("static/img/sample.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		}
+
+		.search_box {
+				padding: 30px;
+				height: 300px;
+				width: 500px;
+				margin-left: 1000px;
+				margin-right: 15px;
+				margin-top: 200px;
+		}
+
+		.search_menu {
+				background-color: grey;
+				padding: 20px;
+				margin:auto;
+				margin-top: 30px;
+				margin-bottom:10px;
+				opacity: 0.8;
+		}
+
+		.myvalue{
+				margin: 10px;
+		}
+
+		nav{
+				opacity: 0.5;
+				background-color: transparent;
+		}
+
+		a{
+				font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">Know Your MP</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li><a href="/">Home</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+			  <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		  </div>
+</nav>
+
+<div class="search_box">
+	<div class="search_menu">
+		<form action="/search" method="POST" name="demoform">
+			<div class="myvalue">
+			<select name="state" class="form-control" id="state">
+				{% for d in data.result%}
+				<option value="{{d.state}}">{{d.state}}</option>
+				{% endfor%}
+			</select>
+			</div>
+
+			<div class="myvalue">
+			<select name="constituency" class="form-control" id="constituency">
+			</select>
+			</div>
+			<div>
+				<input type="submit" class="btn btn-info form-control">
+			</div>
+		</form>
+	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
